@@ -1,4 +1,5 @@
 const parallax_el = document.querySelectorAll('.parallax');
+const main = document.querySelector('main');
 
 let xValue = 0,
   yValue = 0;
@@ -48,6 +49,13 @@ window.addEventListener('mousemove', (e) => {
   update(e.clientX);
 
 });
+
+if (window.innerWidth >= 725) {
+  main.style.maxHeight = `${window.innerHeight}px`;
+} else {
+  main.style.maxHeight = `${window.innerHeight * 1.6}px`;
+
+}
 
 // GSAP ANIMATION
 
